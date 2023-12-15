@@ -18,18 +18,23 @@ d. ((one two) (three four))
 e. (((one)))|#
 
 (module+ test
+  ;; a. (cons 'one (cons 'two (cons 'three (cons 'four '()))))
   (check-equal? (cons 'one (cons 'two (cons 'three (cons 'four '()))))
    '(one two three four))
-  
+
+  ;; b. (cons 'one (cons (cons 'two (cons 'three (cons 'four '()))) '()))
   (check-equal? (cons 'one (cons (cons 'two (cons 'three (cons 'four '()))) '()))
    '(one (two three four)))
-  
+
+  ;; c. (cons 'one (cons (cons 'two (cons 'three '()))(cons 'four '())))
   (check-equal? (cons 'one (cons (cons 'two (cons 'three '()))(cons 'four '())))
   '(one (two three) four))
-  
+
+  ;; d. (cons (cons 'one (cons 'two '())) (cons (cons 'three (cons 'four '())) '()))
   (check-equal? (cons (cons 'one (cons 'two '())) (cons (cons 'three (cons 'four '())) '()))
    '((one two) (three four)))
-  
+
+  ;; e. (cons (cons (cons 'one '()) '()) '())
   (check-equal? (cons (cons (cons 'one '()) '()) '())
    '(((one))))
   )

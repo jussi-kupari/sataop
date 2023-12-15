@@ -20,8 +20,9 @@ g. number2           h. 'number1
 Conduct the experiment on the computer in order to verify your answers.|#
 
 ;; Values returned by Racket
-(define big-number 10500900)     ; 10500900
-(define small-number 0.00000025) ; 2.5e-7
-(define Cheshire 'cat)           ; 'cat
-(define number1 big-number)      ; 10500900
-(define number2 'big-number)     ; 'big-number
+
+(define big-number 10500900)     ; ==> 10500900
+(define small-number 0.00000025) ; ==> 2.5e-7
+(define Cheshire 'cat)           ; ==> 'cat
+(define number1 big-number)      ; ==> 10500900
+(define number2 'big-number)     ; ==> 'big-number
