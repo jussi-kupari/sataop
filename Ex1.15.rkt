@@ -1,8 +1,5 @@
 #lang racket/base
 
-(module+ test
-  (require rackunit))
-
 #|Exercise 1.15
 Decide whether the following expressions are true or false:
 
@@ -14,6 +11,9 @@ e. (equal? (cons 'a '(b c)) (cons 'a '(b c)))
 f. (null? (cdr (cdr '((a b c) d))))
 g. (null? (car '(())))
 h. (null? (car '((()))))|#
+
+(module+ test
+  (require rackunit))
 
 (module+ test
   ;; a. True, the symbols 'a and 'a are identical
@@ -38,5 +38,4 @@ h. (null? (car '((()))))|#
   (check-true (null? (car '(()))))
 
   ;; h. False, The head of the list is a list containing the null list '()
-  (check-false (null? (car '((())))))
-  )
+  (check-false (null? (car '((()))))))

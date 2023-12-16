@@ -1,8 +1,5 @@
 #lang racket/base
 
-(module+ test
-  (require rackunit))
-
 #|Exercise 1.12
 Evaluate each of the following.
 
@@ -13,6 +10,9 @@ d. (cdr (car '((1 2) (3 4) (5 6))))
 e. (car (cdr (car '((cat dog hen)))))
 f. (cadr '(a b c d))
 g. (cadar '((a b) (c d) (e f)))|#
+
+(module+ test
+  (require rackunit))
 
 (module+ test
   ;; a. '()

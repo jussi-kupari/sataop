@@ -1,8 +1,5 @@
 #lang racket/base
 
-(module+ test
-  (require rackunit))
-
 #|Exercises
 Exercise 1.6
 Using the symbols one and two and the procedure cons, we can construct the
@@ -16,6 +13,9 @@ b. (one (two three four))
 c. (one (two three) four)
 d. ((one two) (three four))
 e. (((one)))|#
+
+(module+ test
+  (require rackunit))
 
 (module+ test
   ;; a. (cons 'one (cons 'two (cons 'three (cons 'four '()))))

@@ -1,8 +1,5 @@
 #lang racket/base
 
-(module+ test
-  (require rackunit))
-
 #|Exercise 1.10
 If the operands a and b evaluate to any values, what is
 
@@ -10,6 +7,9 @@ a. (symbol? (cons a b))
 b. (pair? (cons a b))
 c. (null? (cons a b))
 d. (null? (cdr (cons a '())))|#
+
+(module+ test
+  (require rackunit))
 
 (module+ test
   ;; a. False, cons builds a pair/list not a symbol

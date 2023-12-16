@@ -1,8 +1,5 @@
 #lang racket/base
 
-(module+ test
-  (require rackunit))
-
 #|Exercise 1.13
 We can extract the symbol a from the list (b (a c) d) using car and cdr
 by going through the following steps:
@@ -18,6 +15,9 @@ a. (b c a d)
 b. ((b a) (c d))
 c. ((d c) (a) b)
 d. (((a)))|#
+
+(module+ test
+  (require rackunit))
 
 (module+ test
   ;; a. (car (cdr (cdr '(b c a d)))) | (caddr '(b c a d))

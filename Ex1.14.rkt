@@ -1,8 +1,5 @@
 #lang racket/base
 
-(module+ test
-  (require rackunit))
-
 #|Exercise 1.14
 Decide whether the following expressions are true or false:
 
@@ -12,6 +9,9 @@ c. (symbol? (cdr '(cat mouse)))
 d. (pair? (cons 'hound '(dog)))
 e. (pair? (car '(Cheshire cat)))
 f. (pair? (cons '() '()))|#
+
+(module+ test
+  (require rackunit))
 
 (module+ test
   ;; a. True
