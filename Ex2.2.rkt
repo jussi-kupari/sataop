@@ -5,10 +5,10 @@ Define a procedure called third that takes as its argument a list and that
 returns the third item in the list. Assume that the list contains at least three
 items.|#
 
+(provide third)
+
 (module+ test
   (require rackunit))
-
-(provide third)
 
 ;; third : List-of-Any -> Any
 ;; Produces the third item on the list
