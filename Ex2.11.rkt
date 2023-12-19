@@ -15,8 +15,8 @@ is handled in a separate cond clause. Compare the resulting definition with the 
     (cond
       ((null? ls) #f)
       ((equal? (car ls) item) #t)
-      ;Surprisingly, leaving out the answer (#t) in the cond branch also works
-      ;I assume, because the answer is the boolean resulting from the question 
+      ;Leaving out the answer (#t) in the cond branch also works
+      ;Perhaps because the answer is the resulting boolean value 
       ;((equal? (car ls) item))
       (else (member.v2? item (cdr ls))))))
 
