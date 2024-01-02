@@ -31,7 +31,7 @@ for, it inserts it to its left. Test your procedure on
 (module+ test
   (require rackunit))
 
-;; insert-left-1st : Item Item List -> List
+;; insert-left-1st : Any Any List -> List
 ;; Inserts new item in front (left) of the first old item in the list
 (define insert-left-1st
   (λ (new old ls)

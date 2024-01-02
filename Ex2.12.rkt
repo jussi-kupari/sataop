@@ -19,7 +19,7 @@ reproduces the list with the last element removed. A good name for this function
   (require rackunit))
 
 ;; remove-last : List -> List
-;; Removes the last element of a list
+;; Removes the last item of a list
 (define remove-last
   (λ (ls)
     (if (null? (cddr ls))

@@ -13,7 +13,7 @@ d. (s-and-n-list? '(a))|#
 
 ;; s-and-n-list from page 43
 
-;; s-and-n-list : List -> Boolean?
+;; s-and-n-list : List -> Boolean
 ;; Produce true if input is a pair and car is a symbol and cadr a number
 (define s-and-n-list?
   (λ (ls)

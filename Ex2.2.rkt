@@ -10,7 +10,7 @@ items.|#
 (module+ test
   (require rackunit))
 
-;; third : List-of-Any -> Any
+;; third : List -> Any
 ;; Produces the third item on the list
 (define third
   (λ (ls)

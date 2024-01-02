@@ -16,7 +16,7 @@ of a given element item in a list ls. Test your procedure on:
 (module+ test
   (require rackunit))
 
-;; remove-last : Item List -> List
+;; remove-last : Any List -> List
 (define remove-last
   (λ (item ls)
     (cond

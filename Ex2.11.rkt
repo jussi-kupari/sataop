@@ -8,7 +8,7 @@ is handled in a separate cond clause. Compare the resulting definition with the 
 (module+ test
   (require rackunit))
 
-;; member.v2? : Item List -> Boolean
+;; member.v2? : Any List -> Boolean
 ;; Produces true if item is in the list
 (define member.v2?
   (λ (item ls)

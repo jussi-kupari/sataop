@@ -1,6 +1,6 @@
 #lang racket/base
 
-#|Program 2.3 member?|#
+;; Program 2.3 member?
 
 (provide (all-defined-out))
 

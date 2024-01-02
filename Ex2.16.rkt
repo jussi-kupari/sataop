@@ -14,7 +14,7 @@ ls by a given item new-item. Test your procedure on:
 (module+ test
   (require rackunit))
 
-;; replace : Item List -> List
+;; replace : Any List -> List
 ;; Replaces all items in list with new item
 (define replace
   (λ (item ls)

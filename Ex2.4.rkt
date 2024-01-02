@@ -16,7 +16,7 @@ third, and the third element becomes the first. Test your procedure on:
   (only-in "Ex2.1.rkt" second)
   (only-in "Ex2.2.rkt" third))
 
-;; juggle : List-of-3 -> List-of-3
+;; juggle : List -> List
 (define juggle
   (λ (ls)
     (cons (third ls)

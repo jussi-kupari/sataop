@@ -1,6 +1,6 @@
 #lang racket/base
 
-#|Program 2.2 last-item|#
+;; Program 2.2 last-item
 
 (provide last-item)
 
@@ -21,3 +21,4 @@
   (check-equal? (last-item '(cat)) 'cat)
   (check-equal? (last-item '((cat))) '(cat))
   )
+ 

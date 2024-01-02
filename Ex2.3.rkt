@@ -14,7 +14,7 @@ b. (firsts-of-both '((a b) (c d)) '((e f) (g h)))|#
 (module+ test
   (require rackunit))
 
-;; firsts-of-both : List-of-Any List-of-Any -> List-of-2
+;; firsts-of-both : List -> List
 (define firsts-of-both
   (λ (list-1 list-2)
     (make-list-of-two (car list-1) (car list-2))))
@@ -22,12 +22,12 @@ b. (firsts-of-both '((a b) (c d)) '((e f) (g h)))|#
 
 ;; Helper functions from pages 33 and 34
 
-;; make-list-of-one : Any -> List-of-1
+;; make-list-of-one : Any -> List
 (define make-list-of-one
   (λ (item)
     (cons item '())))
 
-;; make-list-of-two : Any Any -> List-of-2
+;; make-list-of-two : Any Any -> List
 (define make-list-of-two
   (λ (item1 item2)
     (cons item1 (make-list-of-one item2))))

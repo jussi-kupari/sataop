@@ -1,6 +1,6 @@
 #lang racket/base
 
-#|Program 2.4 remove-1st|#
+;; Program 2.4 remove-1st
 
 (provide (all-defined-out))
 

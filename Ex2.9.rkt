@@ -14,7 +14,7 @@ d. (s-or-n-list? '())|#
 
 ;; s-or-n-list from page 44
 
-;; s-or-n-list : List -> Boolean?
+;; s-or-n-list : List -> Boolean
 ;; Produce true if input is a pair and car is a symbol or a number
 (define s-or-n-list?
   (λ (ls)

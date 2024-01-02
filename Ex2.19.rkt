@@ -14,7 +14,7 @@ ls with b a b. Test your procedure on:
 (module+ test
   (require rackunit))
 
-;; sandwich-1st : Item Item List -> List
+;; sandwich-1st : Any Any List -> List
 ;; Places the first item between the first occurrence of two successive second items
 (define sandwich-1st
   (λ (a b ls)

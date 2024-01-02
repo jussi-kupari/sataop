@@ -25,7 +25,7 @@ remove-1st with the cond expression replaced by if expressions.|#
   )
 
 
-;; member-if? : Item List -> Boolean
+;; member-if? : Any List -> Boolean
 ;; Tests if item is in the list using if not cond
 (define member-if?
   (λ (item ls)
@@ -42,7 +42,7 @@ remove-1st with the cond expression replaced by if expressions.|#
   (check-false (member-if? 'cat '()))
   )
 
-;; remove-1st-if : Item List -> List
+;; remove-1st-if : Any List -> List
 ;; Produce the list with first occurrence of item removed using if not cond
 (define remove-1st-if
   (λ (item ls)

@@ -18,7 +18,7 @@ Also define procedures substq-1st and substv-1st that use eq? and eqv? respectiv
 (module+ test
   (require rackunit))
 
-;; subst-1st : Item Item List -> List
+;; subst-1st : Any Any List -> List
 ;; Replace the first occurrence of old item with new item in the list
 (define subst-1st
   (λ (new old ls)
@@ -29,7 +29,7 @@ Also define procedures substq-1st and substv-1st that use eq? and eqv? respectiv
       (else
        (cons (car ls) (subst-1st new old (cdr ls)))))))
 
-;; substq-1st : IItem Item List -> List
+;; substq-1st : Any Any List -> List
 (define substq-1st
   (λ (new old ls)
     (cond
@@ -39,7 +39,7 @@ Also define procedures substq-1st and substv-1st that use eq? and eqv? respectiv
       (else
        (cons (car ls) (substq-1st new old (cdr ls)))))))
 
-;; substv-1st : Item Item List -> List
+;; substv-1st : Any Any List -> List
 (define substv-1st
   (λ (new old ls)
     (cond

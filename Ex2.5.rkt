@@ -11,7 +11,7 @@ Test your procedure on the examples given in the previous exercise.|#
   (only-in "Ex2.1.rkt" second)
   (only-in "Ex2.2.rkt" third))
 
-;; switch : List-of-3 -> List-of-3
+;; switch : List -> List
 (define switch
   (λ (ls)
     (cons (third ls)

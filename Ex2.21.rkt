@@ -65,5 +65,5 @@ Test your procedure with:
   (check-false (all-same.v3? '(a b a b a b)))
   (check-true (all-same.v3? '((a b) (a b) (a b))))
   (check-true (all-same.v3? '(a)))
-  (check-true (all-same.v3? '()))
-  )
+  (check-true (all-same.v3? '())))
+  

@@ -12,7 +12,7 @@ Its value is a list composed of the first top-level item in each of the sublists
 (module+ test
   (require rackunit))
 
-;; list-of-first-items : List-of-lists -> List
+;; list-of-first-items : List-of-nonempty-lists -> List
 ;; Produces a list of the first elements of the top-level lists in the list
 (define list-of-first-items
   (λ (ls)

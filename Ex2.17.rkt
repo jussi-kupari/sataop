@@ -18,7 +18,7 @@ defining remove-2nd. Test your procedure on:
 (module+ test
   (require rackunit))
 
-;; remove-2nd : Item List -> List
+;; remove-2nd : Any List -> List
 ;; Removes the second occurrence of the item in the list
 (define remove-2nd
   (λ (item ls)

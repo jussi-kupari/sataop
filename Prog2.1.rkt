@@ -1,6 +1,6 @@
 #lang racket/base
 
-#|Program 2.1 singleton-list?|#
+;; Program 2.1 singleton-list?
 
 (module+ test
   (require rackunit))
@@ -16,4 +16,5 @@
   (check-true (singleton-list? '(a)))
   (check-true (singleton-list? '(123)))
   (check-false (singleton-list? '(a b c)))
-  (check-false (singleton-list? '(a (b c)))))
+  (check-false (singleton-list? '(a (b c))))
+  )
