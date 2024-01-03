@@ -17,9 +17,8 @@ c. ((d c) (a) b)
 d. (((a)))|#
 
 (module+ test
-  (require rackunit))
-
-(module+ test
+  (require rackunit)
+  
   ;; a. (car (cdr (cdr '(b c a d)))) | (caddr '(b c a d))
   (check-equal? (car (cdr (cdr '(b c a d)))) 'a)
   (check-equal? (caddr '(b c a d)) 'a)

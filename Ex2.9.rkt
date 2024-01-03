@@ -9,9 +9,6 @@ b. (s-or-n-list? '(c 2 m))
 c. (s-or-n-list? '(10 10 10 10))
 d. (s-or-n-list? '())|#
 
-(module+ test
-  (require rackunit))
-
 ;; s-or-n-list from page 44
 
 ;; s-or-n-list : List -> Boolean
@@ -23,6 +20,8 @@ d. (s-or-n-list? '())|#
              (number? (car ls))))))
   
 (module+ test
+  (require rackunit)
+  
   ;; test s-or-n-list
   (check-true (s-or-n-list? '(a 1 b)))
   (check-true (s-or-n-list? '(1 a b)))
@@ -42,4 +41,3 @@ d. (s-or-n-list? '())|#
   ;; d. (s-or-n-list? '())
   (check-false (s-or-n-list? '()))
   )
-

@@ -4,9 +4,6 @@
 
 (provide (all-defined-out))
 
-(module+ test
-  (require rackunit))
-
 ;; member? : Item List -> Boolean
 ;; Produces true if item is in the list
 (define member?
@@ -37,6 +34,8 @@
                 (memv? sorn (cdr ls)))))))
 
 (module+ test
+  (require rackunit)
+  
   (check-true (member? 'cat '(dog hen cat pig)))
   (check-false (member? 'fox '(dog hen cat pig)))
   (check-false (member? 2 '(1 (2 3) 4)))

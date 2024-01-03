@@ -9,9 +9,6 @@ Its value is a list composed of the first top-level item in each of the sublists
 (list-of-first-items '((one))) ==> (one)
 (list-of-first-items '()) ==> ()|#
 
-(module+ test
-  (require rackunit))
-
 ;; list-of-first-items : List-of-nonempty-lists -> List
 ;; Produces a list of the first elements of the top-level lists in the list
 (define list-of-first-items
@@ -22,6 +19,8 @@ Its value is a list composed of the first top-level item in each of the sublists
        (cons (caar ls) (list-of-first-items (cdr ls)))))))
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (list-of-first-items '((a) (b c d) (e f))) '(a b e))
   (check-equal? (list-of-first-items '((1 2 3) (4 5 6))) '(1 4))
   (check-equal? (list-of-first-items '((one))) '(one))

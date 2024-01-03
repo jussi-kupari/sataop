@@ -28,9 +28,6 @@ for, it inserts it to its left. Test your procedure on
 (insert-left-1st 'a 'b '(a b c a b c)) ==> (a a b c a b c)
 (insert-left-1st 'a 'b '()) => () |#
 
-(module+ test
-  (require rackunit))
-
 ;; insert-left-1st : Any Any List -> List
 ;; Inserts new item in front (left) of the first old item in the list
 (define insert-left-1st
@@ -43,6 +40,8 @@ for, it inserts it to its left. Test your procedure on
                   (insert-left-1st new old (cdr ls)))))))
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (insert-left-1st 'hot 'dogs '(I eat dogs)) '(I eat hot dogs))
   (check-equal? (insert-left-1st 'fun 'games '(some fun)) '(some fun))
   (check-equal? (insert-left-1st 'a 'b '(a b c a b c)) '(a a b c a b c))

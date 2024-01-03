@@ -26,9 +26,7 @@ c.
 (require (only-in "Prog7.5.rkt" writeline))
 
 (module+ test
-  (require rackunit))
-
-(module+ test
+  (require rackunit)
   
   ;; a. Returns #true
   (check-true
@@ -73,4 +71,3 @@ c.
      Just great! It is good to see you again, Jill
      "Good-bye. Have a nice day." |# 
   )
-

@@ -9,13 +9,12 @@ b. (and (null? expr) (not (null? expr)))
 c. (not (and (or expr #f) (not expr)))
 d. (not (or expr #t))|#
 
-(module+ test
-  (require rackunit))
-
 ;; Set expr as #t for testing
 (define expr #t)
 
 (module+ test
+  (require rackunit)
+  
   ;; a. (or (symbol? expr) (not (symbol? expr)) ==> (or #f (not #f)) ==> (or #f #t) ==> #t
   (check-true (or (symbol? expr) (not (symbol? expr))))
 

@@ -15,9 +15,6 @@ Also define procedures substq-1st and substv-1st that use eq? and eqv? respectiv
 
 (provide (all-defined-out))
 
-(module+ test
-  (require rackunit))
-
 ;; subst-1st : Any Any List -> List
 ;; Replace the first occurrence of old item with new item in the list
 (define subst-1st
@@ -51,6 +48,8 @@ Also define procedures substq-1st and substv-1st that use eq? and eqv? respectiv
 
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (subst-1st 'dog 'cat '(my cat is clever)) '(my dog is clever))
   (check-equal? (subst-1st 'b 'a '(c a b a c)) '(c b b a c))
   (check-equal? (subst-1st '(0) '(*) '((*) (1) (*) (2))) '((0) (1) (*) (2)))

@@ -11,9 +11,6 @@ ls by a given item new-item. Test your procedure on:
 
 (provide replace)
 
-(module+ test
-  (require rackunit))
-
 ;; replace : Any List -> List
 ;; Replaces all items in list with new item
 (define replace
@@ -23,6 +20,8 @@ ls by a given item new-item. Test your procedure on:
       (else (cons item (replace item (cdr ls)))))))
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (replace 'no '(will you do me a favor)) '(no no no no no no))
   (check-equal? (replace 'yes '(do you like ice cream)) '(yes yes yes yes yes))
   (check-equal? (replace 'why '(not)) '(why))

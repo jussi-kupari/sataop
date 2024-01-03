@@ -10,9 +10,6 @@ b. (or e (and (not f) a c))
 c. (not (or (not a) (not b)))
 d. (and (or a f) (not (or b e)))|#
 
-(module+ test
-  (require rackunit))
-
 ;; Set values for expressions
 (define a #t)
 (define b #t)
@@ -21,6 +18,8 @@ d. (and (or a f) (not (or b e)))|#
 (define f #f)
 
 (module+ test
+  (require rackunit)
+  
   ;; a.(and a (or b e)) ==> (and #t (or #t #f)) ==> (and #t #t) ==> #t
   (check-true (and a (or b e)))
 

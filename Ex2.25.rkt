@@ -10,9 +10,6 @@ the example in this section.|#
   (only-in "Prog2.6.rkt" entering)
   (only-in "Prog2.7.rkt" leaving))
 
-(module+ test
-  (require rackunit))
-
 ;; swapper-trace : Item Item List -> List
 ;; Produces a list where the two items have changed places together with tracing output.
 (define swapper-trace
@@ -28,6 +25,8 @@ the example in this section.|#
        (leaving (cons (car ls) (swapper-trace x y (cdr ls))) 4)))))
 
 (module+ test
+  (require rackunit)
+  
   ;; Returns
   (check-equal? (swapper-trace 'b 'd '(a b c d b)) '(a d c b d))
 
@@ -44,6 +43,5 @@ the example in this section.|#
     Leaving cond-clause-4 with result  = (c b d)
     Leaving cond-clause-2 with result  = (d c b d)
     Leaving cond-clause-4 with result  = (a d c b d)
-    '(a d c b d)
-|#
+    '(a d c b d) |#
   )

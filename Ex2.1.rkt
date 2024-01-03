@@ -7,9 +7,6 @@ items.|#
 
 (provide second)
 
-(module+ test
-  (require rackunit))
-
 ;; second : List-of-Any -> Any
 ;; Produces the second item on the list
 (define second
@@ -17,6 +14,8 @@ items.|#
     (cadr ls)))
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (second '(1 2)) 2)
   (check-equal? (second '(5 7 3 8)) 7)
   (check-equal? (second '((1 2) (6 7))) '(6 7))

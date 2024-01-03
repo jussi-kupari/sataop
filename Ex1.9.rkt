@@ -9,9 +9,8 @@ b. (cdr (cons a b))|#
 ;; car and cdr are defined only for non-empty pairs (including lists).
 
 (module+ test
-  (require rackunit))
-
-(module+ test
+  (require rackunit)
+  
   ;; The value of (car (cons a b)) is always the first element of the pair or list
   ;; Lists
   (check-equal? (car (cons 'a '(b c))) 'a)

@@ -15,9 +15,6 @@ defining remove-2nd. Test your procedure on:
 (require
   (only-in "Prog2.4.rkt" remove-1st))
 
-(module+ test
-  (require rackunit))
-
 ;; remove-2nd : Any List -> List
 ;; Removes the second occurrence of the item in the list
 (define remove-2nd
@@ -29,6 +26,8 @@ defining remove-2nd. Test your procedure on:
       (else (cons (car ls) (remove-2nd item (cdr ls)))))))
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (remove-2nd 'cat '(my cat loves cat food)) '(my cat loves food))
   (check-equal? (remove-2nd 'cat '(my cat loves food)) '(my cat loves food))
   (check-equal? (remove-2nd 'cat '(my cat and your cat love cat food)) '(my cat and your love cat food))

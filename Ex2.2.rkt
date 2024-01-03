@@ -7,9 +7,6 @@ items.|#
 
 (provide third)
 
-(module+ test
-  (require rackunit))
-
 ;; third : List -> Any
 ;; Produces the third item on the list
 (define third
@@ -17,6 +14,8 @@ items.|#
     (caddr ls)))
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (third '(1 2 3)) (caddr '(1 2 3)))
   (check-equal? (third '(5 7 3 8)) (caddr '(5 7 3 8)))
   (check-equal? (third '((1 2) (6 7) (7 8 9))) '(7 8 9))

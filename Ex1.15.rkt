@@ -13,9 +13,8 @@ g. (null? (car '(())))
 h. (null? (car '((()))))|#
 
 (module+ test
-  (require rackunit))
-
-(module+ test
+  (require rackunit)
+  
   ;; a. True, the symbols 'a and 'a are identical
   (check-true (eqv? (car '(a b)) (car (cdr '(b a)))))
 
@@ -38,4 +37,5 @@ h. (null? (car '((()))))|#
   (check-true (null? (car '(()))))
 
   ;; h. False, The head of the list is a list containing the null list '()
-  (check-false (null? (car '((()))))))
+  (check-false (null? (car '((())))))
+  )

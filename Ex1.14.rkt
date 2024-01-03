@@ -11,9 +11,8 @@ e. (pair? (car '(Cheshire cat)))
 f. (pair? (cons '() '()))|#
 
 (module+ test
-  (require rackunit))
-
-(module+ test
+  (require rackunit)
+  
   ;; a. True
   (check-true (symbol? (car '(cat mouse))))
 

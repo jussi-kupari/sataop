@@ -9,8 +9,6 @@ third, and the third element becomes the first. Test your procedure on:
 (juggle '(jump quick spot)) ==> (spot jump quick)
 (juggle '(dog bites man) ) ==> (man dog bites)|#
 
-(module+ test
-  (require rackunit))
 
 (require
   (only-in "Ex2.1.rkt" second)
@@ -24,6 +22,8 @@ third, and the third element becomes the first. Test your procedure on:
                 (cons (second ls) '())))))
 
 (module+ test
+  
+  (require rackunit)
   (check-equal? (juggle '(jump quick spot)) '(spot jump quick))
   (check-equal? (juggle '(dog bites man)) '(man dog bites))
   )

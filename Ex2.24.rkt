@@ -28,10 +28,10 @@ d. (describe '(a (b c (d e) f g) h))|#
       ((pair? s) (list 'cons (describe (car s)) (describe (cdr s))))
       (else s))))
 
-
-#| Racket doesn't behave like the book is intending in some of the cases. For example:
+#| Racket doesn't behave quite like the book is intending in some of the cases. For example:
    (list 'quote hello) evaluates to ''hello, when, I assume it is meant in the book to
-   return (quote hello) or something similar |#
+   return (quote hello) or something similar. This is likely because of implementation differences
+   betweem Racket and a Scheme from 1989. |#
 
 #| Answers:
    a. 347
@@ -48,9 +48,3 @@ d. (describe '(a (b c (d e) f g) h))|#
         (cons 'h '())))
 
    describe returns the symbolic/literal version of the expression that evaluates to the given input. |#
-
-
-
-
-
-

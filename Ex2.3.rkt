@@ -11,9 +11,6 @@ Determine the value of the following expressions:
 a. (firsts-of-both '(1357) '(246))
 b. (firsts-of-both '((a b) (c d)) '((e f) (g h)))|#
 
-(module+ test
-  (require rackunit))
-
 ;; firsts-of-both : List -> List
 (define firsts-of-both
   (λ (list-1 list-2)
@@ -34,6 +31,8 @@ b. (firsts-of-both '((a b) (c d)) '((e f) (g h)))|#
 
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (firsts-of-both '(1357) '(246)) '(1357 246))
   (check-equal? (firsts-of-both '((a b) (c d)) '((e f) (g h))) '((a b) (e f)))
   )

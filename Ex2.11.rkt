@@ -5,9 +5,6 @@ The definition of member? given in this section uses an or expression in the
 else clause. Rewrite the definition of member? so that each of the two subexpressions of the or expression
 is handled in a separate cond clause. Compare the resulting definition with the definition of remove-1st.|#
 
-(module+ test
-  (require rackunit))
-
 ;; member.v2? : Any List -> Boolean
 ;; Produces true if item is in the list
 (define member.v2?
@@ -21,6 +18,8 @@ is handled in a separate cond clause. Compare the resulting definition with the 
       (else (member.v2? item (cdr ls))))))
 
 (module+ test
+  (require rackunit)
+  
   (check-true (member.v2? 'cat '(dog hen cat pig)))
   (check-false (member.v2? 'fox '(dog hen cat pig)))
   (check-false (member.v2? 2 '(1 (2 3) 4)))

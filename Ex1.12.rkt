@@ -12,9 +12,8 @@ f. (cadr '(a b c d))
 g. (cadar '((a b) (c d) (e f)))|#
 
 (module+ test
-  (require rackunit))
+  (require rackunit)
 
-(module+ test
   ;; a. '()
   (check-equal? (cdr '((a (b c) d))) '())
   

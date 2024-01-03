@@ -4,9 +4,6 @@
 
 (provide swapper)
 
-(module+ test
-  (require rackunit))
-
 ;; swapper : Item Item List -> List
 ;; Produces a list where the two items have changed places.
 (define swapper
@@ -54,6 +51,8 @@
 
 
 (module+ test
+  (require rackunit)
+  
   ;; swapper
   (check-equal? (swapper 'cat 'dog '(my cat eats dog food)) '(my dog eats cat food))
   (check-equal? (swapper 'John 'mary '(John loves mary)) '(mary loves John))

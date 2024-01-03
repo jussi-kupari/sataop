@@ -12,9 +12,6 @@ cond, then if, and finally and and or. Test your procedures with:
 
 (provide list-of-symbols?)
 
-(module+ test
-  (require rackunit))
-
 ;; list-of-symbols.v1? : List -> Boolean
 ;; Produces true if all items in list are symbols
 (define list-of-symbols?
@@ -43,6 +40,8 @@ cond, then if, and finally and and or. Test your procedures with:
              (list-of-symbols.v3? (cdr ls))))))
 
 (module+ test
+  (require rackunit)
+  
   (check-true (list-of-symbols? '(one two three four five)))
   (check-false (list-of-symbols? '(cat dog (hen pig) cow)))
   (check-false (list-of-symbols? '(a b 3 4 d)))

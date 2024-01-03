@@ -8,9 +8,6 @@ b. (s-and-n-list? '(b 4 u c a j))
 c. (s-and-n-list? '(a ten))
 d. (s-and-n-list? '(a))|#
 
-(module+ test
-  (require rackunit))
-
 ;; s-and-n-list from page 43
 
 ;; s-and-n-list : List -> Boolean
@@ -23,6 +20,8 @@ d. (s-and-n-list? '(a))|#
           (number? (cadr ls)))))
 
 (module+ test
+  (require rackunit)
+  
   ;; test s-and-n-list
   (check-true (s-and-n-list? '(a 1 b)))
   (check-false (s-and-n-list? '(a b 1)))
@@ -39,4 +38,3 @@ d. (s-and-n-list? '(a))|#
   ;; d. (s-and-n-list? '(a))
   (check-false (s-and-n-list? '(a)))
   )
-

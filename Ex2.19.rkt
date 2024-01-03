@@ -11,9 +11,6 @@ ls with b a b. Test your procedure on:
 
 (provide sandwich-1st)
 
-(module+ test
-  (require rackunit))
-
 ;; sandwich-1st : Any Any List -> List
 ;; Places the first item between the first occurrence of two successive second items
 (define sandwich-1st
@@ -26,6 +23,8 @@ ls with b a b. Test your procedure on:
       (else (cons (car ls) (sandwich-1st a b (cdr ls)))))))
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (sandwich-1st 'meat 'bread '(bread cheese bread bread)) '(bread cheese bread meat bread))
   (check-equal? (sandwich-1st 'meat 'bread '(bread jam bread cheese bread)) '(bread jam bread cheese bread))
   (check-equal? (sandwich-1st 'meat 'bread '()) '())

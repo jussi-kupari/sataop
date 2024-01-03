@@ -15,9 +15,8 @@ d. ((one two) (three four))
 e. (((one)))|#
 
 (module+ test
-  (require rackunit))
-
-(module+ test
+  (require rackunit)
+  
   ;; a. (cons 'one (cons 'two (cons 'three (cons 'four '()))))
   (check-equal? (cons 'one (cons 'two (cons 'three (cons 'four '()))))
    '(one two three four))

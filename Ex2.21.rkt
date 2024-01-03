@@ -12,9 +12,6 @@ Test your procedure with:
 
 (provide all-same?)
 
-(module+ test
-  (require rackunit))
-
 ;; cond version
 ;; all-same? : List -> Boolean
 ;; Produces true if all items in the list are identical
@@ -49,6 +46,8 @@ Test your procedure with:
 
 
 (module+ test
+  (require rackunit)
+  
   (check-true (all-same? '(a a a a a)))
   (check-false (all-same? '(a b a b a b)))
   (check-true (all-same? '((a b) (a b) (a b))))
@@ -65,5 +64,5 @@ Test your procedure with:
   (check-false (all-same.v3? '(a b a b a b)))
   (check-true (all-same.v3? '((a b) (a b) (a b))))
   (check-true (all-same.v3? '(a)))
-  (check-true (all-same.v3? '())))
-  
+  (check-true (all-same.v3? '()))
+  )

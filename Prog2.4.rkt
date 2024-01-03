@@ -4,9 +4,6 @@
 
 (provide (all-defined-out))
 
-(module+ test
-  (require rackunit))
-
 ;; remove-1st : Item List -> List
 ;; Produce the list with first occurrence of item removed
 (define remove-1st
@@ -40,6 +37,8 @@
                   (remv-1st sorn (cdr ls)))))))
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (remove-1st 'fox '(hen fox chick cock)) '(hen chick cock))
   (check-equal? (remove-1st 'fox '(hen fox chick fox cock)) '(hen chick fox cock))
   (check-equal? (remove-1st 'fox '(hen (fox chick) cock)) '(hen (fox chick) cock))

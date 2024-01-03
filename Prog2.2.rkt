@@ -4,9 +4,6 @@
 
 (provide last-item)
 
-(module+ test
-  (require rackunit))
-
 ;; last-item : List -> Any
 ;; Produces the last element in the list
 (define last-item
@@ -16,6 +13,8 @@
       (else (last-item (cdr ls))))))
 
 (module+ test
+  (require rackunit)
+  
   (check-equal? (last-item '(1 2 3 4 5)) 5)
   (check-equal? (last-item '(a b (c d))) '(c d))
   (check-equal? (last-item '(cat)) 'cat)

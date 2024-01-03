@@ -9,9 +9,8 @@ c. (null? (cons a b))
 d. (null? (cdr (cons a '())))|#
 
 (module+ test
-  (require rackunit))
+  (require rackunit)
 
-(module+ test
   ;; a. False, cons builds a pair/list not a symbol
   (check-false (symbol? (cons 'a 'b)))
 
