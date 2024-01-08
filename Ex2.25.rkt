@@ -1,8 +1,8 @@
 #lang racket/base
 
 #|Exercise 2.25
-Write a trace similar to the one used in remove-1st-trace to trace the procedure swapper, showing
-the binding of the parameter Is each time the cond expression is entered and whenever a cond clause
+Write a trace similar to the one used in remove-1st-trace to trace the procedure swapper, showing
+the binding of the parameter ls each time the cond expression is entered and whenever a cond clause
 is exited. Invoke the traced procedure swapper-trace on the arguments b, d, and (a b c d b) used in
 the example in this section.|#
 

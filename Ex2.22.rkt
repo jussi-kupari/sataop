@@ -5,6 +5,19 @@ In the first trace, the second and third cond clauses were entered. In the secon
 and third cond clauses were entered. Can you give a remove-1st-trace invocation that enters only the
 first and second cond clauses? Explain.
 
+;; remove-1st-trace
+(define remove-lst-trace
+  (λ (item ls)
+    (cond
+      ((entering (null? ls) ls 1)
+       (leaving '() 1))
+      ((entering (equal? (car ls) item) ls 2)
+       (leaving (cdr ls) 2))
+      ((entering 'else ls 3)
+       (leaving
+        (cons (car ls) (remove-lst-trace item (cdr ls)))
+        3)))))
+
 First trace:
 
 (remove-1st-trace 'c '(a b c d))
