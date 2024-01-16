@@ -12,7 +12,7 @@ Test your procedure on:
 (multiple? 17 1) ==> #t
 (multiple? 0 0) ==>  #t |#
 
-;; This solution seems very hacky.
+(provide multiple?)
 
 ;; multiple? : Integer Integer -> Boolean
 ;; Produce #true if first int is a multiple of second.

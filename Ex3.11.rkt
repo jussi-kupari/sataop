@@ -9,6 +9,8 @@ Write a procedure sum-of-odds that sums the first n odd integers. Test your
 procedure by evaluating it for all values of n from 1 to 10 to see that each
 is the perfect square of the number of terms.|#
 
+(provide sum-of-odds)
+
 ;; sum-odds : NonNegativeInt -> NonNegativeInt
 ;; Produce the sum of first N integers.
 (define sum-of-odds

@@ -10,6 +10,8 @@ procedure on:
 (wrapa 'prisoner 5) ==> (((((prisoner)))))
 (wrapa 'moon 0) ==> moon |#
 
+(provide wrapa)
+
 ;; wrapa : Any NonNegativeInteger -> List or Atom
 ;; Wraps num sets of parentheses around the item
 (define wrapa

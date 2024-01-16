@@ -9,6 +9,8 @@ Test your procedure on:
 (count-backgroiind 'red '(white blue green)) ==> 3
 (count-background 'white '()) ==> 0 |#
 
+(provide count-background)
+
 ;; count-background : Any List -> NonNegativeInteger
 ;; Produce the number of items in list that are different from given item.
 (define count-background
