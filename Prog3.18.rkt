@@ -4,8 +4,8 @@
 
 (provide rmax)
 
-(require (only-in "Prog3.16.rkt" r> r<))
-(require (only-in "Prog3.21.rkt" make-ratl))
+(require (only-in "Prog3.16.rkt" r> r<)
+         (only-in "Prog3.21.rkt" make-ratl))
 
 ;; rmax : Rtl Rtl -> Rtl
 ;; Produces the first given rational if it is bigger, else the second

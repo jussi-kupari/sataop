@@ -4,9 +4,8 @@
 
 (provide rprint)
 
-(require (only-in "Prog7.5.rkt" writeline))
-
-(require (only-in "Prog3.21.rkt" numr denr))
+(require (only-in "Prog7.5.rkt" writeline)
+         (only-in "Prog3.21.rkt" numr denr))
 
 ;; rprint : Rtl ->
 ;; Display the given rational

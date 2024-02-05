@@ -4,8 +4,8 @@
 
 (provide r/)
 
-(require (only-in "Prog3.12.rkt" rinvert))
-(require (only-in "Prog3.10.rkt" r*))
+(require (only-in "Prog3.12.rkt" rinvert)
+         (only-in "Prog3.10.rkt" r*))
 
 ;; r/ : Rtl Rtl -> Rtl
 ;; Divides first rational with second rational
